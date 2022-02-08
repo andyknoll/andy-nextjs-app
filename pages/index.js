@@ -1,6 +1,11 @@
 import Head from 'next/head'
-import Image from 'next/image'
+// import Image from 'next/image'
 import styles from '../styles/Home.module.css'
+import { motion } from "framer-motion";
+
+import AppHeader from '../components/AppHeader'
+import AppContent from '../components/AppContent'
+import AppFooter from '../components/AppFooter'
 
 export default function Home() {
   return (
@@ -11,7 +16,48 @@ export default function Home() {
         <link rel="icon" href="/favicon.ico" />
       </Head>
 
-      <p>00-create-next-app</p>
+      <AppHeader />
+
+      <AppContent>
+        <h3>Home Page</h3>
+        <motion.div
+            initial={{ opacity: 0 }}
+            animate={{ opacity: 1 }}
+            transition={{ duration: .5, delay: 1 }}
+        >        
+          <p>Hello!</p>
+          <p>
+              This small site was built using NextJS and React.<br/><br/>
+              It demonstrates routing, static site generation (SSG) and server-side rendering (SSR)<br/><br/>
+              The static pages include React components which can fetch data from an API after loading.<br/><br/>
+              I hope this can serve as a quick introduction to some of my coding and media production examples.<br/><br/>
+          </p>
+        </motion.div>
+        <motion.div
+            initial={{ opacity: 0 }}
+            animate={{ opacity: 1 }}
+            transition={{ duration: .5, delay: 3 }}
+        >        
+          <p><strong>Thanks for visiting!</strong></p>
+        </motion.div>
+      </AppContent>
+
+      <AppFooter />
+
+      <style jsx>
+      {`
+        p {
+          padding: 10px;
+          font-size: 0.9em;
+          text-align: center;
+        }
+        .p-border {
+          border: 0px solid gray;
+          border-radius: 20px;
+        }
+      `}
+      </style>
+
 
     </div>
   )
