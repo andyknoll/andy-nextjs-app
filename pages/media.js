@@ -50,7 +50,6 @@ const MediaPage = props => {
             <AppContent>
                 <h3>Media Page</h3>
 
-                <div className="video-wrapper">
                     <div className="video-player">
                         <ReactPlayer 
                             url={videos[videoIndex].url}
@@ -67,26 +66,13 @@ const MediaPage = props => {
 
                     <h3>{videos[videoIndex].name}</h3>
                     {videos[videoIndex].author}
-                </div>
+
             </AppContent>
 
             <AppFooter />
 
             <style jsx>
             {`
-                .video-wrapper {
-                    width: 320px;
-                    border: 1px solid red;
-                }
-                .video-player {
-                    width: 320px;
-                    height: 180px;
-                    border: 1px solid green;
-                }
-                .ReactPlayer {
-                    width: 320px !important;
-                    height: 180px !important;
-                }
                 .flex-row {
                     display: flex;
                     // border: 1px solid gray;
@@ -102,12 +88,6 @@ const MediaPage = props => {
                 }
 
                 @media screen and (min-width: 1200px) {
-                    .video-wrapper {
-                        width: 1000px;
-                    }    
-                    .video-player {
-                        width: 1000px;
-                    }
                 }
 
             `}

@@ -26,6 +26,7 @@ export default function Home() {
             transition={{ duration: .5, delay: 1 }}
         >        
           <p>Hello!</p>
+          <br/>
           <p>
               This small site was built using NextJS and React.<br/><br/>
               It demonstrates routing, static site generation (SSG) and server-side rendering (SSR)<br/><br/>
@@ -54,6 +55,12 @@ export default function Home() {
         .p-border {
           border: 0px solid gray;
           border-radius: 20px;
+        }
+
+        @media screen and (min-width: 1200px) {
+          p {
+            font-size: 1.5em;
+          }
         }
       `}
       </style>
