@@ -1,13 +1,21 @@
 import Head from 'next/head'
 // import Image from 'next/image'
-import styles from '../styles/Home.module.css'
+import styles from '../styles/HomePage.module.css'
 import { motion } from "framer-motion";
 
 import AppHeader from '../components/AppHeader'
 import AppContent from '../components/AppContent'
 import AppFooter from '../components/AppFooter'
 
-export default function Home() {
+export default function HomePage(props) {
+  const app = props.app;
+  console.log("");
+  console.log("= HomePage =");
+  console.log("receiving props:");
+  console.log(props);
+  console.log("app: ");
+  console.log(app);
+
   return (
     <div className={styles.container}>
       <Head>

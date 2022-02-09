@@ -7,7 +7,14 @@ import AppContent from '../components/AppContent'
 import AppFooter from '../components/AppFooter'
 
 const CodePage = props => {
-
+    const app = props.app;
+    console.log("");
+    console.log("= CodePage =");
+    console.log("receiving props:");
+    console.log(props);
+    console.log("app: ");
+    console.log(app);
+      
     return (
         <div className="code-page">
             <AppHeader />
