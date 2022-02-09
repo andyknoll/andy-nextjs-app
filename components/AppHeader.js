@@ -7,6 +7,9 @@ const AppHeader = props => {
             <style jsx>
             {`
                 .app-header {
+                    position: fixed;
+                    z-index: 9999;
+                    width: 100%;
                     top: 0px;
                     height: 50px;
                     padding: 10px;

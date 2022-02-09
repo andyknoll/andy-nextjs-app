@@ -9,6 +9,9 @@ const AppFooter = props => {
             <style jsx>
             {`
                 .app-footer {
+                    position: fixed;
+                    z-index: 9999;
+                    width: 100%;
                     bottom: 0px;
                     height: 50px;
                     padding: 10px;

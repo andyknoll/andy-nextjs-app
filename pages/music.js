@@ -6,6 +6,9 @@ import AppFooter from '../components/AppFooter'
 
 import ReactAudioPlayer from 'react-audio-player';
 
+const BACH = "";
+const PURCELL = "";
+
 const MusicPage = props => {
 
     return (
@@ -17,21 +20,59 @@ const MusicPage = props => {
 
                 <div className="audio-player">
                     <ReactAudioPlayer
-                        src="media/JSBach.wav"
+                        src={BACH}
                         controls
                     />
-                    <p>J.S. Bach</p>
+                    <p>J.S. Bach 1</p>
                     <p className={"italic"}>Chorus from Cantata 43</p>
                 </div>
 
                 <div className="audio-player">
                     <ReactAudioPlayer
-                        src="media/Purcell.wav"
+                        src={PURCELL}
                         controls
                     />
-                    <p>Henry Purcell</p>
+                    <p>Henry Purcell 2</p>
                     <p className={"italic"}>Sonata for Three Horns</p>
                 </div>
+
+                <div className="audio-player">
+                    <ReactAudioPlayer
+                        src={BACH}
+                        controls
+                    />
+                    <p>J.S. Bach 3</p>
+                    <p className={"italic"}>Chorus from Cantata 43</p>
+                </div>
+
+                <div className="audio-player">
+                    <ReactAudioPlayer
+                        src={PURCELL}
+                        controls
+                    />
+                    <p>Henry Purcell 4</p>
+                    <p className={"italic"}>Sonata for Three Horns</p>
+                </div>
+
+                <div className="audio-player">
+                    <ReactAudioPlayer
+                        src={BACH}
+                        controls
+                    />
+                    <p>J.S. Bach 5</p>
+                    <p className={"italic"}>Chorus from Cantata 43</p>
+                </div>
+
+                <div className="audio-player">
+                    <ReactAudioPlayer
+                        src={PURCELL}
+                        controls
+                    />
+                    <p>Henry Purcell 6</p>
+                    <p className={"italic"}>Sonata for Three Horns</p>
+                </div>
+
+                <div className="horiz-spacer"></div>
 
             </AppContent>
 
@@ -50,6 +91,10 @@ const MusicPage = props => {
                 }
                 .italic {
                     font-style: italic;
+                }
+                .horiz-spacer {
+                    width: 100%;
+                    height: 50px;
                 }
             `}
             </style>

@@ -5,13 +5,12 @@ import { motion } from "framer-motion";
 const AppContent = props => {
 
     <motion.h3
-    initial={{ opacity: 0, top: "100px" }}
-    animate={{ opacity: 1, top: "0px" }}
-    transition={{ duration: 0.5 }}
->
-    Code Page
-</motion.h3>
-
+        initial={{ opacity: 0, top: "100px" }}
+        animate={{ opacity: 1, top: "0px" }}
+        transition={{ duration: 0.5 }}
+    >
+        Code Page
+    </motion.h3>
 
     return (
         <motion.div
@@ -27,15 +26,14 @@ const AppContent = props => {
             {`
                 .app-content {
                     position: relative;
-                    bottom: 0px;
-                    height: calc(100vh - 100px);
+                    top: 50px;
                     padding: 10px;
                     display: flex;
                     flex-direction: column;
                     align-items: center;
                     justify-content: flex-start;
-                    min-height: 600px;
                     overflow: scrollY;
+                    // min-height: 600px;
                     // background-color: #dddddd;
                     // border: 1px solid green;
                 }  

@@ -25,7 +25,7 @@ export default function Home() {
             animate={{ opacity: 1 }}
             transition={{ duration: .5, delay: 1 }}
         >        
-          <p>Hello!</p>
+          <p>Hello there!</p>
           <br/>
           <p>
               This small site was built using NextJS and React.<br/><br/>
