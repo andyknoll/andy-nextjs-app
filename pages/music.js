@@ -21,7 +21,7 @@ const MusicPage = props => {
                         controls
                     />
                     <p>J.S. Bach</p>
-                    <p className="italic">"Chorus from Cantata 43"</p>
+                    <p className={"italic"}>Chorus from Cantata 43</p>
                 </div>
 
                 <div className="audio-player">
@@ -30,7 +30,7 @@ const MusicPage = props => {
                         controls
                     />
                     <p>Henry Purcell</p>
-                    <p className="italic">"Sonata for Three Horns"</p>
+                    <p className={"italic"}>Sonata for Three Horns</p>
                 </div>
 
             </AppContent>
