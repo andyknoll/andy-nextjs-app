@@ -34,9 +34,10 @@ const AppContent = props => {
                     flex-direction: column;
                     align-items: center;
                     justify-content: flex-start;
-                    //background-color: #dddddd;
                     min-height: 600px;
                     overflow: scrollY;
+                    // background-color: #dddddd;
+                    // border: 1px solid green;
                 }  
             `}
             </style>

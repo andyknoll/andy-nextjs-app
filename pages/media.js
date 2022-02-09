@@ -50,22 +50,24 @@ const MediaPage = props => {
             <AppContent>
                 <h3>Media Page</h3>
 
-                    <div className="video-player">
-                        <ReactPlayer 
-                            url={videos[videoIndex].url}
-                            controls={true}
-                        />
-                    </div>
+                <div className="video-player">
+                    <ReactPlayer 
+                        url={videos[videoIndex].url}
+                        controls={true}
+                        width="100%"
+                        height="100%"
+                    />
+                </div>
 
-                    <div className="flex-row">
-                        <button className="button-a" onClick={() => playVideo(0)}>{videos[0].name}</button>
-                        <button className="button-a" onClick={() => playVideo(1)}>{videos[1].name}</button>
-                        <button className="button-a" onClick={() => playVideo(2)}>{videos[2].name}</button>
-                        <button className="button-a" onClick={() => playVideo(3)}>{videos[3].name}</button>
-                    </div>
+                <div className="flex-row">
+                    <button className="button-a" onClick={() => playVideo(0)}>{videos[0].name}</button>
+                    <button className="button-a" onClick={() => playVideo(1)}>{videos[1].name}</button>
+                    <button className="button-a" onClick={() => playVideo(2)}>{videos[2].name}</button>
+                    <button className="button-a" onClick={() => playVideo(3)}>{videos[3].name}</button>
+                </div>
 
-                    <h3>{videos[videoIndex].name}</h3>
-                    {videos[videoIndex].author}
+                <h3>{videos[videoIndex].name}</h3>
+                {videos[videoIndex].author}
 
             </AppContent>
 
@@ -73,8 +75,16 @@ const MediaPage = props => {
 
             <style jsx>
             {`
+                .video-player {
+                    width: 340px;
+                    height: 180px;
+                    margin-bottom: 20px;
+                    // border: 1px solid red;
+                }
                 .flex-row {
+                    width: 350px;
                     display: flex;
+                    justify-content: space-between;
                     // border: 1px solid gray;
                 }
                 .button-a {
@@ -88,6 +98,13 @@ const MediaPage = props => {
                 }
 
                 @media screen and (min-width: 1200px) {
+                    .video-player {
+                        width: 680px;
+                        height: 360px;
+                    }
+                    .flex-row {
+                        width: 690px;
+                    }    
                 }
 
             `}
