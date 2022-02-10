@@ -63,6 +63,7 @@ const MusicPage = props => {
                     <p className={"italic"}>Chorus from Cantata 43</p>
                 </div>
 
+                {/*
                 <div className="audio-player">
                     <ReactAudioPlayer
                         src={PURCELL}
@@ -71,6 +72,7 @@ const MusicPage = props => {
                     <p>Henry Purcell 6</p>
                     <p className={"italic"}>Sonata for Three Horns</p>
                 </div>
+                */}
 
                 <div className="horiz-spacer"></div>
 

@@ -21,6 +21,7 @@ https://www.youtube.com/watch?v=wfN8z4LCP4Q
 */
 
 import React from 'react'
+import andyApp from '../app/AndyApp';
 
 import AppHeader from '../components/AppHeader'
 import AppContent from '../components/AppContent'
@@ -28,15 +29,17 @@ import AppFooter from '../components/AppFooter'
 
 import ReactPlayer from 'react-player'
 
-const videos = [
-    {name: "Hollywood Orchestra", url: "https://www.youtube.com/watch?v=wfN8z4LCP4Q", author: "East West"},
-    {name: "Visual Overload", url: "https://www.youtube.com/watch?v=90x2xX3rjuo", author: "Andy Knoll"},
-    {name: "Best of Beatclub", url: "https://www.youtube.com/watch?v=InQ44lgY1gw", author: "Beatclub"},
-    {name: "RIT Sports Zone", url: "https://youtu.be/nw_FYcd8xSw", author: "Andy Knoll"}
-]
+// now using andyApp.videos!  :-)
+// const videos = [
+//     {name: "Hollywood Orchestra", url: "https://www.youtube.com/watch?v=wfN8z4LCP4Q", author: "East West"},
+//     {name: "Visual Overload", url: "https://www.youtube.com/watch?v=90x2xX3rjuo", author: "Andy Knoll"},
+//     {name: "Best of Beatclub", url: "https://www.youtube.com/watch?v=InQ44lgY1gw", author: "Beatclub"},
+//     {name: "RIT Sports Zone", url: "https://youtu.be/nw_FYcd8xSw", author: "Andy Knoll"}
+// ]
 
 const MediaPage = props => {
 
+    const videos = andyApp.videos;
     const [videoIndex, setVideoIndex] = React.useState(0);
 
     const playVideo = (index) => {
@@ -49,6 +52,7 @@ const MediaPage = props => {
 
             <AppContent>
                 <h3>Media Page</h3>
+                <p>app.counter: {andyApp.counter}</p>
 
                 <div className="video-player">
                     <ReactPlayer 

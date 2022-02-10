@@ -1,3 +1,6 @@
+// index.js
+
+import React from "react";
 import Head from 'next/head'
 // import Image from 'next/image'
 import styles from '../styles/HomePage.module.css'
@@ -7,14 +10,30 @@ import AppHeader from '../components/AppHeader'
 import AppContent from '../components/AppContent'
 import AppFooter from '../components/AppFooter'
 
+import andyApp from '../app/AndyApp';
+
 export default function HomePage(props) {
   const app = props.app;
   console.log("");
-  console.log("= HomePage =");
-  console.log("receiving props:");
-  console.log(props);
-  console.log("app: ");
-  console.log(app);
+  console.log("=== HomePage ===");
+
+  //andyApp.incrCounter();
+  console.log("andyApp: ");
+  console.log(andyApp);
+
+  const [localCounter, setLocalCounter] = React.useState(andyApp.counter);
+
+  // app.visitCount += 1;
+  // console.log("incremented app.visitCount to: " +   app.visitCount);
+  // console.log("props:");
+  // console.log(props);
+  // console.log("app: ");
+  // console.log(app);
+  // console.log("props.app.visitCount: ");
+  // console.log(props.app.visitCount);
+  // console.log("app.visitCount: ");
+  // console.log(app.visitCount);
+  // console.log("");
 
   return (
     <div className={styles.container}>
@@ -31,10 +50,16 @@ export default function HomePage(props) {
         <motion.div
             initial={{ opacity: 0 }}
             animate={{ opacity: 1 }}
-            transition={{ duration: .5, delay: 1 }}
+            transition={{ duration: .5, delay: .5 }}
         >        
           <p>Hello there!</p>
-          <br/>
+
+          <p><small>app.counter: {localCounter}</small></p>
+          <p>
+            <button onClick={() => {andyApp.decrCounter(); setLocalCounter(andyApp.counter)}}>decr counter</button>
+            <button onClick={() => {andyApp.incrCounter(); setLocalCounter(andyApp.counter)}}>incr counter</button>
+          </p>
+
           <p>
               This small site was built using NextJS and React.<br/><br/>
               It demonstrates routing, static site generation (SSG) and server-side rendering (SSR)<br/><br/>
@@ -45,7 +70,7 @@ export default function HomePage(props) {
         <motion.div
             initial={{ opacity: 0 }}
             animate={{ opacity: 1 }}
-            transition={{ duration: .5, delay: 3 }}
+            transition={{ duration: .5, delay: 2 }}
         >        
           <p><strong>Thanks for visiting!</strong></p>
         </motion.div>
@@ -64,6 +89,14 @@ export default function HomePage(props) {
           border: 0px solid gray;
           border-radius: 20px;
         }
+        button {
+          margin: 5px;
+          width: 150px;
+          height: 40px;
+          color: #000000;
+          border: none;
+          border-radius: 5px;
+      }
 
         @media screen and (min-width: 1200px) {
           p {

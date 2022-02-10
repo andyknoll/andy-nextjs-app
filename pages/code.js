@@ -1,19 +1,30 @@
 // code.js
 
+import React from "react";
 import { motion } from "framer-motion";
 
 import AppHeader from '../components/AppHeader'
 import AppContent from '../components/AppContent'
 import AppFooter from '../components/AppFooter'
 
-const CodePage = props => {
-    const app = props.app;
+import andyApp from '../app/AndyApp';
+
+const CodePage = (props) => {
+    //const app = props.app;
     console.log("");
-    console.log("= CodePage =");
-    console.log("receiving props:");
-    console.log(props);
-    console.log("app: ");
-    console.log(app);
+    console.log("=== CodePage ===");
+
+    console.log("andyApp: ");
+    console.log(andyApp);
+
+    const [localCounter, setLocalCounter] = React.useState(andyApp.counter);
+  
+    // console.log("props.app.visitCount BEFORE incr: " +   props.app.visitCount);
+    // props.app.visitCount += 1;
+    // console.log("props.app.visitCount AFTER incr: " +   props.app.visitCount);
+    // console.log("props:");
+    // console.log(props);
+    // console.log("");
       
     return (
         <div className="code-page">
@@ -21,6 +32,13 @@ const CodePage = props => {
 
             <AppContent>
                 <h3>Code Page</h3>
+
+                <p>app.counter: {andyApp.counter}</p>
+                <div>
+                    <button onClick={() => {andyApp.decrCounter(); setLocalCounter(andyApp.counter)}}>decr counter</button>
+                    <button onClick={() => {andyApp.incrCounter(); setLocalCounter(andyApp.counter)}}>incr counter</button>
+                </div>
+                <br/>
 
                 <motion.div initial={{ opacity: 0 }} animate={{ opacity: 1 }} transition={{ delay: 0.25 }} style={{width: "100%"}}>
                     <div className="content-card">
@@ -40,11 +58,15 @@ const CodePage = props => {
                     </div>
                 </motion.div>
 
+                {/*
                 <motion.div initial={{ opacity: 0 }} animate={{ opacity: 1 }} transition={{ delay: 1.0 }} style={{width: "100%"}}>
                     <div className="content-card">
                         Code Example 4
                     </div>
                 </motion.div>
+                */}
+
+                <div className="horiz-spacer"></div>
 
             </AppContent>
 
@@ -61,6 +83,20 @@ const CodePage = props => {
                     border-radius: 10px;
                     box-shadow: 1px 1px 1px gray;
                     // border: 1px solid gray;
+                }
+
+                button {
+                    margin: 5px;
+                    width: 150px;
+                    height: 40px;
+                    color: #000000;
+                    border: none;
+                    border-radius: 5px;
+                }
+
+                .horiz-spacer {
+                    width: 100%;
+                    height: 50px;
                 }
 
                 @media screen and (min-width: 1200px) {
