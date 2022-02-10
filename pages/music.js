@@ -20,59 +20,39 @@ const MusicPage = props => {
 
                 <div className="audio-player">
                     <ReactAudioPlayer
-                        src={BACH}
+                        src="/media/Alchemy_70.mp3"
                         controls
                     />
-                    <p>J.S. Bach 1</p>
-                    <p className={"italic"}>Chorus from Cantata 43</p>
+                    <p>East West</p>
+                    <p className={"italic"}>Alchemy_70</p>
                 </div>
 
                 <div className="audio-player">
                     <ReactAudioPlayer
-                        src={PURCELL}
+                        src="/media/Cannibal_130.mp3"
                         controls
                     />
-                    <p>Henry Purcell 2</p>
-                    <p className={"italic"}>Sonata for Three Horns</p>
+                    <p>East West</p>
+                    <p className={"italic"}>Cannibal_130</p>
                 </div>
 
                 <div className="audio-player">
                     <ReactAudioPlayer
-                        src={BACH}
+                        src="http://andyknoll.com/mp3s/sd2/Death_Hunt_120.mp3"
                         controls
                     />
-                    <p>J.S. Bach 3</p>
-                    <p className={"italic"}>Chorus from Cantata 43</p>
+                    <p>East West</p>
+                    <p className={"italic"}>Death_Hunt_120.mp3</p>
                 </div>
 
                 <div className="audio-player">
                     <ReactAudioPlayer
-                        src={PURCELL}
+                        src="http://andyknoll.com/mp3s/sd2/Eastern_Visions_120.mp3"
                         controls
                     />
-                    <p>Henry Purcell 4</p>
-                    <p className={"italic"}>Sonata for Three Horns</p>
+                    <p>East West</p>
+                    <p className={"italic"}>Eastern_Visions_120.mp3</p>
                 </div>
-
-                <div className="audio-player">
-                    <ReactAudioPlayer
-                        src={BACH}
-                        controls
-                    />
-                    <p>J.S. Bach 5</p>
-                    <p className={"italic"}>Chorus from Cantata 43</p>
-                </div>
-
-                {/*
-                <div className="audio-player">
-                    <ReactAudioPlayer
-                        src={PURCELL}
-                        controls
-                    />
-                    <p>Henry Purcell 6</p>
-                    <p className={"italic"}>Sonata for Three Horns</p>
-                </div>
-                */}
 
                 <div className="horiz-spacer"></div>
 
